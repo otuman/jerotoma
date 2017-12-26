@@ -11,7 +11,13 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap-sass');
+    require('../custom/js/creative.min.js');
+    require( '../custom/js/jerotoma.js');
+
 } catch (e) {}
+
+
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
