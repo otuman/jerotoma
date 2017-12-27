@@ -42,8 +42,8 @@
     </section>
     <footer>
         <div class="container">
-            <p>&copy; 2016 Start Bootstrap. All Rights Reserved.</p>
-            <ul class="list-inline">
+            <p class="text-center right-text">&copy; {{Date('Y')}} Jerotoma. All Rights Reserved.</p>
+            <ul class="list-inline text-center">
                 <li>
                     <a href="#">Privacy</a>
                 </li>

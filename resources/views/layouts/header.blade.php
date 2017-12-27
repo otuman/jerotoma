@@ -1,4 +1,3 @@
-div.row
 <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -37,6 +36,8 @@ div.row
                                     </ul>
                                   </li>
                                @endforeach
+                            @else
+                             <li><a href="{{ url('/learntocode') }}">Learn To Code</a></li>
                             @endif
                         </ul>
                    </li>

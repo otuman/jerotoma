@@ -8,28 +8,41 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Jerotoma') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('extra-css')
+    <style>
+        section#services{
+            color: #fff;
+            background-color: #ee6e73;
+            border-color: #ee6e73;
+        }
+        .text-muted {
+            color: #f5f8fa;
+        }
+    </style>
+
 </head>
 <body>
     <div id="app">
         <!-- Header -->
         @include('layouts.header')           
-
-         <!-- End Header -->      
-
+        <!-- End Header -->      
          <!-- Main Body Section -->          
-
-            @yield('content')
+        <section id="content">
+              @yield('content')
+        </section>
+           
        <!-- End Main Body Section -->
        <!-- Footer -->
             @include('layouts.footer')  
-         </div>
+     
          <!-- End Footer -->
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+     @yield('extra-script')
 </body>
 </html>

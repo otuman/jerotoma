@@ -23,23 +23,7 @@ Route::get('/aboutus', [
     ]);
 
 /**** Portfolio us page route **/
-Route::get('/portfolio', [
-    'uses' => 'HomeControllers\HomeController@getPortfolio',
-    'as'   => 'portfolio'
-    ]);
+Route::resource('portfolio','PortfolioController');
 
 /**** Dashborad page route **/
-Route::get('/dashboard', [
-    'uses' => 'BlogControllers\ViewController@getDashboard',
-    'as'   => 'dashboard'
-    ]);
-/**** Dashborad page route **/
-Route::get('/upload-view', [
-    'uses' => 'BlogControllers\ViewController@getUploadFileView',
-    'as'   => 'upload-view'
-    ]);
-/**** Dashborad page route **/
-Route::post('/upload', [
-    'uses' => 'BlogControllers\ViewController@postUploadFile',
-    'as'   => 'upload'
-    ]);
+Route::resource('learntocode','LearnToCodeController');
